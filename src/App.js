@@ -22,7 +22,21 @@ function App() {
 
 
 
+  function returnValue(a, b, c) {
 
+    if (a === "*") {
+      return (b / c)
+    }
+    else if (a === "/") {
+      return (b / c)
+    }
+    else if (a === "+") {
+      return (b + c)
+    }
+    else {
+      return (b - c)
+    }
+  }
 
 
 
@@ -36,10 +50,10 @@ function App() {
       showEnd()
     }
 
-    useScore(eval((score + currentOperator + document.getElementById(name).innerHTML).toString()))
+
+    useScore(returnValue(currentOperator, score, document.getElementById(name).innerHTML))
 
 
-    const listOfSigns = ["*", "/", "+", "-"]
     const randomNumber = Math.floor(Math.random() * 4)
     const randomOper = listOfSigns[randomNumber]
     const operation = randomOper;

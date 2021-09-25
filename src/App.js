@@ -29,16 +29,13 @@ function App() {
   function SayHello(name) {
 
 
-    if (rounds == 10) {
+    if (rounds === 10) {
       showEnd()
     }
-    if (isFinite(score) == false) {
+    if (isFinite(score) === false) {
       showEnd()
     }
 
-
-    console.log(score + " : " + document.getElementById(name).innerHTML + " : " + currentOperator)
-    console.log(eval((score + currentOperator + document.getElementById(name).innerHTML).toString()))
     useScore(eval((score + currentOperator + document.getElementById(name).innerHTML).toString()))
 
 
@@ -66,7 +63,7 @@ function App() {
 
 
   function ResetRounds() {
-    if (score == "Infinity") {
+    if (score === "Infinity") {
       updateHighScore(0)
     }
     else {

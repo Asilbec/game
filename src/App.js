@@ -25,16 +25,16 @@ function App() {
   function returnValue(a, b, c) {
 
     if (a === "*") {
-      return (b / c)
+      return (parseInt(b) * parseInt(c))
     }
     else if (a === "/") {
-      return (b / c)
+      return (parseInt(b) / parseInt(c))
     }
     else if (a === "+") {
-      return (b + c)
+      return (parseInt(b) + parseInt(c))
     }
     else {
-      return (b - c)
+      return (parseInt(b) - parseInt(c))
     }
   }
 
@@ -99,13 +99,13 @@ function App() {
   return (
     <div className="App">
       <div className="CompleteScreen" id="compScreen">
-        <div className="explainEd" id="Explain">Good job you were {Math.abs((100 - Math.abs(score.toFixed(1))).toFixed(1))} points away from 100</div>
+        <div className="explainEd" id="Explain">Good job you were {Math.abs(100 - Math.abs(score))} points away from 100</div>
         <button onClick={ResetRounds} className="Reset">Reset</button>
       </div>
-      <div id="highScoreTracker">Last Score : {highScore}</div>
+      <div id="highScoreTracker">Last Score : {Math.abs(highScore)}</div>
       <div className="gameContainer" id="niceStuff">
         <div className="Score">
-          <div id="scoreKeep" className="keepScore">{score.toFixed(1)}</div>
+          <div id="scoreKeep" className="keepScore">{Math.round(score)}</div>
           <div id="sign" className="sign">{currentOperator}</div>
         </div>
         <div className="cards">

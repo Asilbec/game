@@ -80,6 +80,11 @@ function App() {
     if (score === "Infinity") {
       updateHighScore(0)
     }
+
+    else if (score === "NaN") {
+      updateHighScore(0)
+    }
+
     else {
       updateHighScore((100 - score.toFixed(1)).toFixed(1))
     }
@@ -105,7 +110,7 @@ function App() {
       <div id="highScoreTracker">Last Score : {Math.abs(highScore)}</div>
       <div className="gameContainer" id="niceStuff">
         <div className="Score">
-          <div id="scoreKeep" className="keepScore">{Math.round(score)}</div>
+          <div id="scoreKeep" className="keepScore">{(parseFloat(score).toFixed(2))}</div>
           <div id="sign" className="sign">{currentOperator}</div>
         </div>
         <div className="cards">

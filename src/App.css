@@ -1,5 +1,5 @@
 .App {
-  background-color: rgb(14, 13, 13);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   width: 100%;
   height: 100vh;
   display: block;
@@ -8,10 +8,37 @@
   margin: auto;
 }
 
+.Card {
+  background-image: linear-gradient(
+    to right,
+    #ececec 0%,
+    #d6e5eb 51%,
+    #414141 100%
+  );
+}
+.Card {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.Card:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 .gameContainer {
   height: 90%;
-  width: 100%;
-  background-color: rgb(14, 13, 13);
+  width: auto;
+  background-color: rgba(255, 0, 0, 0);
   margin: auto;
   margin-top: 70px;
 }
@@ -23,7 +50,7 @@
   background-color: rgb(255, 255, 255);
   margin: auto;
   font-size: 600%;
-  color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   display: inline;
   line-height: 110%;
 }
@@ -33,19 +60,22 @@
   height: 70%;
   background-color: rgb(255, 255, 255);
   border-color: rgb(253, 253, 253);
-  border-width: 5px;
+  border-width: 3px;
   border-style: solid;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 2px;
   text-align: center;
   font-size: 600%;
+  text-align: center;
+  justify-content: center;
+  filter: drop-shadow(10px 10px 4px #88888a7a);
 }
 
 .cards {
   margin: auto;
   width: 50%;
   height: 30%;
-  background-color: rgb(14, 13, 13);
+  background-color: rgba(255, 255, 255, 0);
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
@@ -98,11 +128,7 @@
 .scoreKeep {
   color: black;
   text-align: center;
-}
-
-.Card {
-  text-align: center;
-  justify-content: center;
+  filter: drop-shadow(10px 10px 4px #88888a7a);
 }
 
 @media screen and (max-width: 1080px) {
@@ -123,6 +149,7 @@
   .keepScore {
     height: auto;
     font-size: 90%;
+    filter: drop-shadow(10px 10px 4px #88888a7a);
   }
 }
 
@@ -147,28 +174,31 @@
   font-size: xx-large;
   text-align: center;
   margin: auto;
-  color: rgb(9, 239, 255);
+  color: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 .Reset {
-  width: 70%;
-  height: 105%;
+  width: 50%;
+  height: 50%;
   border-style: solid;
-  border-radius: 10px;
-  background-color: rgb(9, 239, 255);
-  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+  backdrop-filter: 5px;
   font-size: xx-large;
   margin-top: 100px;
   margin: auto;
+  border-width: 0px;
+  filter: drop-shadow(10px 10px 4px #88888a7a);
 }
 
 #highScoreTracker {
   font-size: xx-large;
   width: fit-content;
   height: auto;
-  color: rgb(255, 255, 255);
+  color: rgb(24, 24, 24);
   white-space: pre-wrap;
   tab-size: 10px;
+  filter: drop-shadow(10px 10px 4px #88888a7a);
 }
 
 .progressBar {

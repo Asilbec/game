@@ -104,7 +104,7 @@ function App() {
   return (
     <div className="App">
       <div className="CompleteScreen" id="compScreen">
-        <div className="explainEd" id="Explain">Good job you were {Math.abs(100 - Math.abs(score))} points away from 100</div>
+        <div className="explainEd" id="Explain">Good job ! You were {Math.abs(100 - Math.abs(score))} points away from 100</div>
         <button onClick={ResetRounds} className="Reset">Reset</button>
       </div>
       <div id="highScoreTracker">

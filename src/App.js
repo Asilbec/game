@@ -107,7 +107,11 @@ function App() {
         <div className="explainEd" id="Explain">Good job you were {Math.abs(100 - Math.abs(score))} points away from 100</div>
         <button onClick={ResetRounds} className="Reset">Reset</button>
       </div>
-      <div id="highScoreTracker">Last Score : {Math.abs(highScore)}</div>
+      <div id="highScoreTracker">
+        <span>
+          {"\t"}Last Score : {Math.abs(highScore)} {'\n'}
+          {"\t"}Round: {rounds}</span>
+      </div>
       <div className="gameContainer" id="niceStuff">
         <div className="Score">
           <div id="scoreKeep" className="keepScore">{(parseFloat(score).toFixed(2))}</div>

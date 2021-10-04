@@ -167,6 +167,8 @@
   width: fit-content;
   height: auto;
   color: rgb(255, 255, 255);
+  white-space: pre-wrap;
+  tab-size: 10px;
 }
 
 .progressBar {
